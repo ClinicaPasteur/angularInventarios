@@ -1,0 +1,45 @@
+<div class="container-fluis mt-5"
+fxLayout
+fxLayout.xs="column"
+fxLayoutAlign="center"
+fxLayoutGap="0"
+fxLayoutGap.xs="0">
+<div class="login-card mat-ekevation-z8" fxFlex="35%">
+  <main class="login-content"
+  fxLayout="column"
+  fxLayoutAlign="center center">
+  <span class="login-header mb-5 mt-3">Iniciar Sesión</span>
+  <!--login formulario-->
+  <form [formGroup]="form" class="login-form align-items-center" fxLayout="column" (ngSubmit)="login($event)">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Correo Electronico</mat-label>
+      <input matInput placeholder="Correo Electronico" type="email" formControlName='email'>
+      <mat-icon matPrefix>mail_outline</mat-icon>
+      <mat-error *ngIf="form.controls.email.hasError('email') && !form.controls.email.hasError('required')">Por favor ingrese un email valido.</mat-error>
+      <mat-error *ngIf="form.controls.email.hasError('required')">El email es <strong>obligatorio</strong></mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Contraseña</mat-label>
+      <input matInput placeholder="Contraseña" type="password" formControlName='password'>
+      <mat-icon matPrefix>lock_outline</mat-icon>
+      <mat-error *ngIf="form.controls.password.hasError('required')">La contraseña es <strong>obligatorio</strong></mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="warn" type="submit" class="login-button mt-3">Ingresar</button>
+    <!-- <button mat-raised-button color="warn" class="login-button1">Warn</button> -->
+  </form>
+  <div class="mt-3">
+    <a class="forgot-link" routerLink="/forgot-password">Olvide mi clave</a>
+  </div>
+</main>
+  
+</div>
+  <div class="login-card mat-elevation-z8"
+  fxFlex=45%
+  fxLayout="column"
+  fxLayoutAlign="end start"
+  [ngStyle]="unsplashClass()">
+  <div class="login-aside-overlay"></div>
+  <h1 class="login-welcome-text">Clinica Pasteur</h1>
+  <hr class="login-aside-hr">
+  </div>
+</div>
