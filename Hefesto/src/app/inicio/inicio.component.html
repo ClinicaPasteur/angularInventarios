@@ -1,1 +1,22 @@
-<p>inicio works!</p>
+<h2>PAGINA PRINCIPAL</h2>
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div fxFlex="25%" *ngFor="let i of [1,2,3,4,5,6]">
+            <mat-card class="mat-elevation-z4">
+                <mat-card-header>
+                    <mat-card-title>Todos los equipos {{i}}</mat-card-title>
+                </mat-card-header>
+                <img mat-card-image src = "https://www.thebalancesmb.com/thmb/0qlr4dSni8aBpZwaiXpS4oVfppk=/2123x1412/filters:fill(auto,1)/GettyImages-88295063-5744f4893df78c6bb04cc130.jpg">
+                <mat-card-content>
+                    <p>
+                        Más detalles
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-flat-button color="primary" type="button" (click)="VerEquipos()">Ver todos los equipos</button>
+                </mat-card-actions>
+            </mat-card>
+
+        </div>
+    </div>
+</div>

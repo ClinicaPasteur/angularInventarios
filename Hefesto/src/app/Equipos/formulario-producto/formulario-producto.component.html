@@ -1,0 +1,102 @@
+<app-mostrar-errores [errores]="errores"></app-mostrar-errores>
+<form (submit)="guardarCambios()" [formGroup]="form">
+    <mat-form-field appearance="outline">
+        <mat-label>Fecha</mat-label>
+        <input formControlName="fecha" matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="form.invalid">La Fecha es requerida</mat-error>
+    </mat-form-field>
+    <!-- <mat-form-field appearance="outline">
+        <mat-label>Tipo de Equipo</mat-label>
+        <mat-select formControlName="equipo_tipo">
+            <mat-option *ngFor="let tip of tipos" [value]="tip.tip_codigo">{{tip.tipo_descripcion}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.invalid">Tipo de Equipo requerido</mat-error>
+    </mat-form-field> -->
+    <mat-form-field appearance="outline">
+        <mat-label>Marca</mat-label>
+        <input formControlName="marca" matInput>
+        <mat-error *ngIf="form.invalid">{{obtenerErrorCampoMarca()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Modelo</mat-label>
+        <input formControlName="model" matInput>
+        <mat-error *ngIf="form.invalid">El modelo es requerido</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Serie</mat-label>
+        <input formControlName="serie" matInput>
+        <mat-error *ngIf="form.invalid">La serie es requerida</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Código Activo</mat-label>
+        <input formControlName="codActivo" matInput>
+        <mat-error *ngIf="form.invalid">El código activo es requerido</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>CPU (Procesador)</mat-label>
+        <input formControlName="cpu" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Generación</mat-label>
+        <input formControlName="generacion" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Núcleos</mat-label>
+        <input formControlName="nucleos" matInput>
+    </mat-form-field>
+    <!-- <mat-form-field appearance="outline">
+        <mat-label>Cantidad RAM</mat-label>
+        <input formControlName="ram" matInput (keypress)="onlyNumber($event)">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Tipo de RAM</mat-label>
+        <mat-select formControlName="ram_tipo">
+            <mat-option *ngFor="let tip of rams" [value]="tip.id">{{tip.tipo}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="numeros">
+        <mat-label>Cantidad Disco Duro</mat-label>
+        <input formControlName="capacidad" matInput (keypress)="onlyNumber($event)">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Tipo de Disco</mat-label>
+        <mat-select formControlName="disco_tipo">
+            <mat-option *ngFor="let tip of tipos_disco" [value]="tip.id">{{tip.tipo}}</mat-option>
+        </mat-select>
+    </mat-form-field> -->
+    <!-- <mat-form-field appearance="outline">
+        <mat-label>Edificio</mat-label>
+        <mat-select formControlName="edificio_tipo">
+            <mat-option *ngFor="let tip of edificios" [value]="tip.id">{{tip.tipo}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.invalid">El edificio es requerido</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Piso</mat-label>
+        <mat-select formControlName="piso_tipo">
+            <mat-option *ngFor="let tip of pisos" [value]="tip.id">{{tip.tipo}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.invalid">El piso es requerido</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Área</mat-label>
+        <mat-select formControlName="area_tipo">
+            <mat-option *ngFor="let tip of areas" [value]="tip.id">{{tip.tipo}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.invalid">El área es requerido</mat-error>
+    </mat-form-field> -->
+    <div>
+        <mat-checkbox formControlName="antivirus">BitDefender</mat-checkbox>
+    </div>
+    <!-- <app-autocomplete-equipos></app-autocomplete-equipos> -->
+    <div>
+        <button mat-flat-button color="primary" [disabled]="form.invalid">
+            Guardar
+        </button>
+        <a mat-stroked-button (click)="Cancelar()">
+            Cancelar
+        </a>
+    </div>
+</form>

@@ -1,0 +1,19 @@
+<h2>Buscar Equipos</h2>
+<form [formGroup]="form">
+    <mat-form-field appearance="outline">
+        <mat-label>Tipo de Equipo</mat-label>
+        <mat-select formControlName="codigo">
+            <mat-option *ngFor="let tip of tipos" [value]="tip.id">{{tip.tipo}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Marca</mat-label>
+        <input formControlName="marca" matInput>
+    </mat-form-field>
+    <!-- <div>
+        <mat-checkbox formControlName="proximo">proximo</mat-checkbox>
+    </div> -->
+    <div>
+        <button mat-flat-button (click)="limpiar()" color="warn">Cancelar</button>
+    </div>
+</form>

@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
    // AQUI DEFINIRESEMOS LA TEMANTICA DE NUESTA IMAGEN DE FONDO
-   styleImage = 'computer';
+   styleImage = 'repair-computer';
    form: FormGroup | any;
 
   constructor(private formBuilder: FormBuilder) { }

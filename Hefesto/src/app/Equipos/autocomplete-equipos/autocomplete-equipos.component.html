@@ -1,0 +1,17 @@
+<form>
+    <mat-form-field>
+        <mat-label>Areas</mat-label>
+        <input type="text"
+        placeholder="Seleccione el area"
+        matInput
+        [formControl]="control"
+        [matAutocomplete]="auto">
+    </mat-form-field>
+    <mat-autocomplete #auto="matAutocomplete"
+    (optionSelected)="optionSelected($event)">
+        <mat-option *ngFor="let opcion of areas" [value]="opcion">
+            <!-- <img [src]="opcion.foto"> -->
+            {{opcion.tipo}}
+        </mat-option>
+    </mat-autocomplete>
+</form>

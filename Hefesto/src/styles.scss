@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+// html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .full-width{
@@ -63,13 +63,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 190px;
     font-size: 1.1rem;
 }
-// .login-button1{
-//     display: table-cell;
-//     width: 490px;
-// }
-// .login-button1 .mat-button-base {
-//     margin: 8px 8px 8px 0;
-//   }
 @media screen and (max-width: 959px){
     .login-aside{
         display: none;
@@ -77,4 +70,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     .container-fluid{
         width: 100%;
     }
+}
+.content{
+    padding: 16px;
+}
+.content > mat-card{
+    width: 200px;
+}
+mat-toolbar{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1000;
+}
+.contenedor{
+    margin: 20px;
 }

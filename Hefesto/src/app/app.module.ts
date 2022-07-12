@@ -1,5 +1,7 @@
 import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {} from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,7 +23,13 @@ import { ProductoComponent } from './Equipos/producto/producto.component';
 import { PedidoComponent } from './Pedidos/pedido/pedido.component';
 import { CompraComponent } from './Compras/compra/compra.component';
 import { ComparativoComponent } from './Reportes/comparativo/comparativo.component';
-import { RolesComponent } from './Configuracion/roles/roles.component'
+import { RolesComponent } from './Configuracion/roles/roles.component';
+import { CrearProductoComponent } from './Equipos/crear-producto/crear-producto.component';
+import { EditarProductoComponent } from './Equipos/editar-producto/editar-producto.component';
+import { FormularioProductoComponent } from './Equipos/formulario-producto/formulario-producto.component';
+import { FiltroProductoComponent } from './Equipos/filtro-producto/filtro-producto.component';
+import { AutocompleteEquiposComponent } from './Equipos/autocomplete-equipos/autocomplete-equipos.component';
+import { MostrarErroresComponent } from './utilidades/mostrar-errores/mostrar-errores.component'
 
 @NgModule({
   declarations: [
@@ -36,11 +44,17 @@ import { RolesComponent } from './Configuracion/roles/roles.component'
     CompraComponent,
     ComparativoComponent,
     RolesComponent,
+    CrearProductoComponent,
+    EditarProductoComponent,
+    FormularioProductoComponent,
+    FiltroProductoComponent,
+    AutocompleteEquiposComponent,
+    MostrarErroresComponent,
   ],
   exports:[
     LoginComponent,
     MenuComponent,
-    ListadoComponent
+    ListadoComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +67,9 @@ import { RolesComponent } from './Configuracion/roles/roles.component'
     MatInputModule,
     MatIconModule,
     FontAwesomeModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

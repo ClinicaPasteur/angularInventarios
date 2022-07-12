@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { faUserLargeSlash, faHouse, faDashboard, faComputer, faStore, faCartShopping, faChartSimple, faGears } from '@fortawesome/free-solid-svg-icons';
+import { faUserLargeSlash, faHouse, faDashboard, faComputer, faStore, 
+  faCartShopping, faChartSimple, faGears, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-menu',
@@ -14,6 +15,7 @@ export class MenuComponent {
   faCompra = faCartShopping;
   faReportes = faChartSimple;
   faConfiguracion = faGears;
+  faBuscar = faMagnifyingGlass;
 
   constructor() { }
 

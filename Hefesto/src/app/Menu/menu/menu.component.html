@@ -1,42 +1,51 @@
 <mat-toolbar color="accent">
+    <span>Clínica Pasteur</span>
+    <!-- <span class="logo">
+        <img src="./../assets/Imagenes/logo-pasteurblanco.png" alt="">
+    </span> -->
+    <div>
+        <a mat-button routerLink="Equipos/buscar">
+            <fa-icon [icon]="faBuscar"></fa-icon>  Buscar Equipos
+        </a>
+    </div>
+    <div>
+        <a mat-button routerLink="inicio">
+            <fa-icon [icon]="faHouse"></fa-icon>  Inicio
+        </a>
+    </div>
+    <div>
+        <a mat-button routerLink="dashboard">
+            <fa-icon [icon]="faDashboard"></fa-icon>  Dashboard
+        </a>
+    </div>
+    <div>
+        <a mat-button routerLink="producto">
+            <fa-icon [icon]="faComputer"></fa-icon>  Producto
+        </a>
+    </div>
+    <div>
+        <a mat-button routerLink="compra">
+            <fa-icon [icon]="faCompra"></fa-icon>  Compras
+        </a>
+    </div>
+    <div>
+        <a mat-button routerLink="pedido">
+            <fa-icon [icon]="faPedido"></fa-icon>  Pedidos
+        </a>
+    </div>
+    <div>
+        <a mat-button routerLink="comparativo">
+            <fa-icon [icon]="faReportes"></fa-icon>  Reportes
+        </a>
+    </div>
+    <div>
+        <a mat-button routerLink="roles">
+            <fa-icon [icon]="faConfiguracion"></fa-icon>  Configuración
+        </a>
+    </div>
     <span>
         <a routerLink="" mat-button>
-            <fa-icon [icon]="faUserSlash"></fa-icon>Cerrar Sesión
+            <fa-icon [icon]="faUserSlash"></fa-icon>  Cerrar Sesión
         </a>
     </span>
-    <div>
-        <a mat-button routerLink="inicio">
-            <fa-icon [icon]="faHouse"></fa-icon>Inicio
-        </a>
-    </div>
-    <div>
-        <a mat-button routerLink="inicio">
-            <fa-icon [icon]="faDashboard"></fa-icon>Dashboard
-        </a>
-    </div>
-    <div>
-        <a mat-button routerLink="inicio">
-            <fa-icon [icon]="faComputer"></fa-icon>Producto
-        </a>
-    </div>
-    <div>
-        <a mat-button routerLink="inicio">
-            <fa-icon [icon]="faCompra"></fa-icon>Compras
-        </a>
-    </div>
-    <div>
-        <a mat-button routerLink="inicio">
-            <fa-icon [icon]="faPedido"></fa-icon>Pedidos
-        </a>
-    </div>
-    <div>
-        <a mat-button routerLink="inicio">
-            <fa-icon [icon]="faReportes"></fa-icon>Reportes
-        </a>
-    </div>
-    <div>
-        <a mat-button routerLink="inicio">
-            <fa-icon [icon]="faConfiguracion"></fa-icon>Configuración
-        </a>
-    </div>
 </mat-toolbar>
